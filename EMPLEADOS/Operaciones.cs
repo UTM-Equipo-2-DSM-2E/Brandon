@@ -58,7 +58,7 @@ abstract class EMPLEADO //CLASE PADRE EMPLEADO
         public override double respUesuario { get => base.respUesuario; set => base.respUesuario = value; } //Cambiar por variables
     }
     
-    public class Operaciones //Esta debe ir al final de las clases hijo, o antes de la clase abstract, no puede estar en medio de las clases hijo, porque si no el programa no reconoce a la clase Padre
+    public class Operaciones 
     {
         EmpleadosAsalariados SueldoASALARIOS = new EmpleadosAsalariados();
         Empleadosxhoras SueldoXHORAS = new Empleadosxhoras();
