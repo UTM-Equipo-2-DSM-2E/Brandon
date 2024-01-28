@@ -1,51 +1,64 @@
+using System.Dynamic;
+
 namespace TRABAJADORES;
-
-public class Empleado    //<-------- este es la Clase base o clase padre segun yo
+public abstract class Empleado    //<-------- este es la Clase base o clase padre segun yo
 {
-    private string NombreEMPLE {get; set;} //El get y set deben de ir en un metodo de acceso
-    private string ApellidoEMPLE {get; set;}
-    private string TipoEMPLE {get; set;}
+    public string nombreEMPLEADO {get; set;}
+    public string ApellEMPLEADO {get; set;}
+    public string TipoEMPLE {get; set;}
+    public abstract double CALCULARPAGO();
+}
+public class EmpleadosASALARIADOS : Empleado  //<-----este es clase heredada o clase hijo para los empleados asalariados
+{
+    public double SalarioASALAR {get; set;}
+    public override double CALCULARPAGO()
+    {
+        return SalarioASALAR;
+    }
 
-    public virtual double CALCULARPAGO() //¿Para que usaste virtual si es una clase publica?
+    public class EmpleadosXHORAS : Empleado  //<----este es clase heredada o clase hijo para los empleados xhoras
     {
-        return 0;
-    }
-    class EmpleadosASALARIADOS : Empleado //¿Porque esta dentro de la clase padre?
-    {
-        public double Salarios {get; set;} //Esto es un metodo de acceso, ¿Pero donde declaraste la variable?
-        public override double CALCULARPAGO()
-        {
-            return Salarios;
-        }
-    }
-    class EmpleadosXHORAS : Empleado //Clase hijo, ¿Porque esta dentro de la clase padre?
-    {
-        public double SueldosXHORAS {get; set;}
+        public double SueldoXHORAS {get; set;}
         public double HorasTRABAJADAS {get; set;}
         public override double CALCULARPAGO()
         {
             if (HorasTRABAJADAS <= 40)
             {
-                return SueldosXHORAS * HorasTRABAJADAS;
-                
+                return SueldoXHORAS * HorasTRABAJADAS;
             }
             else
             {
-                return (SueldosXHORAS * 40) + (HorasTRABAJADAS - 40) * (SueldosXHORAS * 1.5);
+                double SalarioSFIJO = SueldoXHORAS * 40;
+                double SalarioSEXTRA = (HorasTRABAJADAS - 40) * (SueldoXHORAS * 1.5);
+                return SalarioSFIJO + SalarioSEXTRA;
             }
         }
 
-    }
-    class EmpleadosXCOMISIONI : Empleado //esta dentro de la clase padre
-    {
-        public double VentasdeEmple {get; set;} //Donde declaraste la variable privada?
-        public double Porcentajedelacomision {get; set;} //Donde declaraste la variable privada?, no esta en la clase padre.
-        public override double CALCULARPAGO()
+        public class EmpleadosXCOMISION : Empleado  //<--------este es clase heredada o clase hijo para los empleados xcomision
         {
-            return base.CALCULARPAGO() + VentasdeEmple * (Porcentajedelacomision / 100) * 1;
+            public double VentasEMPLEADOS {get; set;}
+            public double PorcentajeXCOMISION {get; set;}
+            public override double CALCULARPAGO()
+            {
+                return VentasEMPLEADOS * (PorcentajeXCOMISION / 100);
+            }
         }
 
+        public class EmpleadosASALARIADOSXCOMISION : Empleado  //<-------este es clase heredada o clase hijo para los empleados asalriados que tienen comision
+        {
+            public double SalarioNORMAL {get; set;}
+            public override double CALCULARPAGO()
+            {
+                double SalariosCONCOMISION = CALCULARPAGO();
+                return SalarioNORMAL + SalariosCONCOMISION;
+            }
+        }
     }
+
+
+
 
 
 }
+
+
