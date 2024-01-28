@@ -39,26 +39,26 @@ abstract class EMPLEADO //CLASE PADRE EMPLEADO
 
     class EmpleadosAsalariados : EMPLEADO
     {
-        public override double SueldoAsalario { get => base.SueldoAsalario; set => base.SueldoAsalario = value; }
+        public override double SueldoAsalario { get => base.SueldoAsalario; set => base.SueldoAsalario = value; } //cambia base.SueldoAsalario por la variable correspondiente, sin el base, solamente el nombre de la variable (Asala creo que es)
     }
     class Empleadosxhoras : EMPLEADO
     {
-        public override double SueldoXHora { get => base.SueldoXHora; set => base.SueldoXHora = value; }
+        public override double SueldoXHora { get => base.SueldoXHora; set => base.SueldoXHora = value; } //Lo mismo que la variable anterior
     }
     class Empleadosxcomision : EMPLEADO
     {
-        public override double SueldoEmpleXComi { get => base.SueldoEmpleXComi; set => base.SueldoEmpleXComi = value; }
+        public override double SueldoEmpleXComi { get => base.SueldoEmpleXComi; set => base.SueldoEmpleXComi = value; } // Cambiar por variables
     }
     class Empleadosasalariadosxcomision : EMPLEADO
     {
-        public override double SueldoAsalariXComi { get => base.SueldoAsalariXComi; set => base.SueldoAsalariXComi = value; }
+        public override double SueldoAsalariXComi { get => base.SueldoAsalariXComi; set => base.SueldoAsalariXComi = value; } //Cambiar por variables
     }
     public class opciones : EMPLEADO
     {
-        public override double respUesuario { get => base.respUesuario; set => base.respUesuario = value; }
+        public override double respUesuario { get => base.respUesuario; set => base.respUesuario = value; } //Cambiar por variables
     }
     
-    public class Operaciones 
+    public class Operaciones //Esta debe ir al final de las clases hijo, o antes de la clase abstract, no puede estar en medio de las clases hijo, porque si no el programa no reconoce a la clase Padre
     {
         EmpleadosAsalariados SueldoASALARIOS = new EmpleadosAsalariados();
         Empleadosxhoras SueldoXHORAS = new Empleadosxhoras();
