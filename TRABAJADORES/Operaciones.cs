@@ -2,7 +2,7 @@ namespace TRABAJADORES;
 
 public class Empleado    //<-------- este es la Clase base o clase padre segun yo
 {
-    private string NombreEMPLE {get; set;}
+    private string NombreEMPLE {get; set;} //El get y set deben de ir en un metodo de acceso
     private string ApellidoEMPLE {get; set;}
     private string TipoEMPLE {get; set;}
 
@@ -10,15 +10,15 @@ public class Empleado    //<-------- este es la Clase base o clase padre segun y
     {
         return 0;
     }
-    class EmpleadosASALARIADOS : Empleado
+    class EmpleadosASALARIADOS : Empleado //¿Porque esta dentro de la clase padre?
     {
-        public double Salarios {get; set;}
+        public double Salarios {get; set;} //Esto es un metodo de acceso, ¿Pero donde declaraste la variable?
         public override double CALCULARPAGO()
         {
             return Salarios;
         }
     }
-    class EmpleadosXHORAS : Empleado
+    class EmpleadosXHORAS : Empleado //Clase hijo, ¿Porque esta dentro de la clase padre?
     {
         public double SueldosXHORAS {get; set;}
         public double HorasTRABAJADAS {get; set;}
@@ -36,10 +36,10 @@ public class Empleado    //<-------- este es la Clase base o clase padre segun y
         }
 
     }
-    class EmpleadosXCOMISIONI : Empleado
+    class EmpleadosXCOMISIONI : Empleado //esta dentro de la clase padre
     {
-        public double VentasdeEmple {get; set;}
-        public double Porcentajedelacomision {get; set;}
+        public double VentasdeEmple {get; set;} //Donde declaraste la variable privada?
+        public double Porcentajedelacomision {get; set;} //Donde declaraste la variable privada?, no esta en la clase padre.
         public override double CALCULARPAGO()
         {
             return base.CALCULARPAGO() + VentasdeEmple * (Porcentajedelacomision / 100) * 1;
