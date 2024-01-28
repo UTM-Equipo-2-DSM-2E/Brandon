@@ -1,0 +1,14 @@
+C:\Users\brand\Documents\EMPLEADOS\bin\Debug\net7.0\EMPLEADOS.exe
+C:\Users\brand\Documents\EMPLEADOS\bin\Debug\net7.0\EMPLEADOS.deps.json
+C:\Users\brand\Documents\EMPLEADOS\bin\Debug\net7.0\EMPLEADOS.runtimeconfig.json
+C:\Users\brand\Documents\EMPLEADOS\bin\Debug\net7.0\EMPLEADOS.dll
+C:\Users\brand\Documents\EMPLEADOS\bin\Debug\net7.0\EMPLEADOS.pdb
+C:\Users\brand\Documents\EMPLEADOS\obj\Debug\net7.0\EMPLEADOS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brand\Documents\EMPLEADOS\obj\Debug\net7.0\EMPLEADOS.AssemblyInfoInputs.cache
+C:\Users\brand\Documents\EMPLEADOS\obj\Debug\net7.0\EMPLEADOS.AssemblyInfo.cs
+C:\Users\brand\Documents\EMPLEADOS\obj\Debug\net7.0\EMPLEADOS.csproj.CoreCompileInputs.cache
+C:\Users\brand\Documents\EMPLEADOS\obj\Debug\net7.0\EMPLEADOS.dll
+C:\Users\brand\Documents\EMPLEADOS\obj\Debug\net7.0\refint\EMPLEADOS.dll
+C:\Users\brand\Documents\EMPLEADOS\obj\Debug\net7.0\EMPLEADOS.pdb
+C:\Users\brand\Documents\EMPLEADOS\obj\Debug\net7.0\EMPLEADOS.genruntimeconfig.cache
+C:\Users\brand\Documents\EMPLEADOS\obj\Debug\net7.0\ref\EMPLEADOS.dll
