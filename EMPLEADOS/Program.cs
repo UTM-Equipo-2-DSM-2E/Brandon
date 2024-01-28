@@ -15,7 +15,7 @@ class Program
         Console.WriteLine(" 2 = Empleado x hora");
         Console.WriteLine(" 3 = Empleado x comision");
         Console.WriteLine(" 4 = Empleado Asalariado x comision");
-        double respuestaUsuario = double.Parse(Console.ReadLine());
+        double respuestaUsuario = double.Parse(Console.ReadLine()); //¿Lo hizo Chat GPT?, porque asi declara las variables.
 
     }   
 }
