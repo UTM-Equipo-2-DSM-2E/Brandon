@@ -6,7 +6,7 @@ public class Empleado    //<-------- este es la Clase base o clase padre segun y
     private string ApellidoEMPLE {get; set;}
     private string TipoEMPLE {get; set;}
 
-    public virtual double CALCULARPAGO()
+    public virtual double CALCULARPAGO() //¿Para que usaste virtual si es una clase publica?
     {
         return 0;
     }
